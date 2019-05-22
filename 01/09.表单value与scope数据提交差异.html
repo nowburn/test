@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <form action="1.php" method="POST">
+            标题：<input type="password" name="title" ng-trim ng-model="title">
+            <input type="text" name="data"><br>
+            <input type="submit">
+        </form>
+        {{title}}
+    </div>
+
+    <script src="../angular-1.4.3/angular.js"></script>
+    <script src="../jquery-3.4.1.js"></script>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.title = '';
+            $('form').submit(function () {
+                $("[name='data']").val($scope.title)
+              })
+        })
+    </script>
+
+</body>
+
+</html>

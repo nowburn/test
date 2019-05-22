@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <input type="text" ng-mousedown="add()" ng-model="title">
+
+    <script src="../angular-1.4.3/angular.js"></script>
+    <script>
+        var m = angular.module('myApp', []);
+        m.controller('myCtrl', function ($scope) {
+            $scope.add=function(){
+                console.log('hello');
+            }
+        })
+    </script>
+
+</body>
+
+</html>

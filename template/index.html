@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="bg-w foot">
+        <li ui-sref-active="select" ui-sref="main"><span>首页</span></li>
+        <li ui-sref-active="select" ui-sref="search"><span>附近</span></li>
+        <li ui-sref-active="select" ui-sref="me"><span>我</span></li>
+    </ul>
+
+    <script src="../angular-1.4.3/angular.js"></script>
+    <script>
+        angular.module('app').config(['$stateProvider', '$urlRouterProvider', function ($stateProvider,
+            $urlRouterProvider) {
+            $stateProvider.state('main', {
+                url: '/main',
+                templateUrl: 'view/main.html',
+                controller: 'mainCtrl'
+            });
+            $urlRouterProvider.otherwise('main');
+        }])
+    </script>
+</body>
+
+</html>

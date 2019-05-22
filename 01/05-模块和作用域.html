@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body ng-app="myApp">
+
+    <div ng-controller="myController">
+            <input type="text" ng-model="username1">
+            <p>员工名字1：{{username1}}</p>
+            <input type="text">
+            <p>员工名字2：{{}}</p>
+    </div>
+    
+    <!-- <script src="../angular-1.4.3/angular.js"></script> -->
+    <script src="http://code.angularjs.org/1.2.25/angular.min.js"></script>
+    <script>
+        var myModule = angular.module('myApp', []);
+        myModule.controller('myController', function ($scope) {
+
+        })
+    </script>
+</body>
+
+</html>

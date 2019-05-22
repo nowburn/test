@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl as my">
+    clientID:{{my.clientId}}
+
+    <script src="../angular-1.4.3/angular.js"></script>
+    <script>
+        var m = angular.module('myApp', []);
+        m.value('clientId','a12345654321x');
+
+        m.controller('myCtrl', ['clientId',function myCtrl(clientId){
+            this.clientId='clientId';
+        }])
+    </script>
+
+</body>
+
+</html>

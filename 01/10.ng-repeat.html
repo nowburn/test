@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <body ng-app="myApp" ng-controller="myCtrl">
+        <ul>
+            <li ng-repeat="(k,v) in data" style="{{$even?'color:red':''}}">
+                {{v.name}}---{{v.url}}
+            </li>
+            <hr>
+            <li ng-repeat="(k,v) in data">
+                <span ng-if="$first" style="{{$first?'color:red':''}}">{{v.name}}---{{v.url}}</span>
+                <span ng-if="$middle" >{{v.name}}---{{v.url}}</span>
+                <span ng-if="$last" style="{{$last?'color:gray':''}}">{{v.name}}---{{v.url}}</span>
+            </li>
+        </ul>
+
+    </body>
+
+    <script src="../angular-1.4.3/angular.js"></script>
+    <script>
+        var m = angular.module('myApp', []);
+        m.controller('myCtrl', function ($scope) {
+            $scope.data = [{
+                    name: 'wang',
+                    url: 'wang.com'
+                },
+                {
+                    name: 'yun',
+                    url: 'yun.com'
+                },
+                {
+                    name: 'docker',
+                    url: 'docker.com'
+                },
+                {
+                    name: 'web',
+                    url: 'web.com'
+                }
+            ]
+        })
+    </script>
+</body>
+
+</html>

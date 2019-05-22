@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- <body ng-app ng-init="username='tom'"> -->
+<!-- <input type="text" ng-model="username">
+    <p>name1:{{username}}</p>
+    <input type="text" ng-model="username">
+    <p>name2:{{username}}</p>
+    <script src="../angular-1.4.3//angular.js"></script> -->
+
+<body ng-app>
+    <div ng-init="qty=1;cost=2">
+        <b>订单:</b>
+        <div>
+          数量: <input type="number" ng-model="qty" required >
+        </div>
+        <div>
+          单价: <input type="number" ng-model="cost" required >
+        </div>
+        <div>
+          <b>总价: {{qty*cost}}</b> 
+        </div>
+      </div>
+  <script src="../angular-1.4.3/angular.js"></script>
+</body>
+
+</html>

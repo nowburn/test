@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body ng-app>
+  <input type="text" ng-init="username = 'hello'" ng-model="username">
+  <p>输入的内容是： <span>{{username}}</span></p>
+
+  <select ng-init="name = 'hello'" ng-model="name">
+    <option value="{{name}}"> </option>
+  </select>
+  <p>{{name}}</p>
+
+  <script src="../angular-1.4.3/angular.js"></script>
+</body>
+
+</html>
